@@ -1,13 +1,16 @@
 import BookList from "./components/BookList";
 import Navbar from "./components/Navbar";
+import ThemeContextProvider from "./contexts/ThemeContext";
 
 
-//1,2,,,,,,,,,,,,,,,,,,,,21
+//1,2,3,,,,,,,,,,,,,,,,,,,21
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <BookList />
+      <ThemeContextProvider>
+        <Navbar />
+        <BookList />        
+      </ThemeContextProvider>
     </div>
   );
 }
